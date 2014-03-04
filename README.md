@@ -7,7 +7,7 @@ grids](http://css-tricks.com/dont-overthink-it-grids/).
 
 Add the following to your `bower.json` dependencies:
 
-`"tact.object.grid": "git@github.com:colinkahn/tact.object.grid.git#0.1.0"`
+`"tact.objects.grid": "git@github.com:colinkahn/tact.objects.grid.git#0.1.0"`
 
 ## Example
 
