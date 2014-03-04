@@ -1,0 +1,94 @@
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
+
+$grid-padding: 20px !default;
+
+
+
+
+
+/**
+ * Grid container.
+ *
+ * 1. Add a bottom margin equal to the grid padding.
+ * 2. Clearfix.
+ */
+
+.grid {
+  margin: 0 0 $grid-padding 0; /* [1] */
+
+  &:after { /* [1] */
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+
+
+/**
+ * A padded variation of our grid.
+ * 
+ * 1. Adding padding to all sides except the right, right padding will be
+ *    managed by grid items.
+ */
+
+.grid--padded {
+  padding: $grid-padding 0 $grid-padding $grid-padding;
+}
+
+
+
+
+
+  /*
+   * An item in our grid, this should have a width class from below applied.
+   *
+   * 1. Add padding to the right of each item.
+   * 2. For normal grids, reset the last items padding to zero.
+   * 3. For padded grids, keep the padding for the last item.
+   */
+
+  .grid__item {
+    float: left;
+    padding-right: $grid-padding; /* [1] */
+
+    .grid &:last-of-type {
+      padding-right: 0; /* [2] */
+    }
+
+    .grid--padded &:last-of-type {
+      padding-right: $grid-padding; /* [3] */
+    }
+  }
+
+
+
+
+
+  /**
+   * Sizing classes, use with .grid__item class above.
+   */
+
+  .two-thirds {
+    width: 66.66%;
+  }
+
+  .one-third {
+    width: 33.33%;
+  }
+
+  .one-half {
+    width: 50%;
+  }
+
+  .one-quarter {
+    width: 25%;
+  }
+
+  .one-eighth {
+    width: 12.5%;
+  }
